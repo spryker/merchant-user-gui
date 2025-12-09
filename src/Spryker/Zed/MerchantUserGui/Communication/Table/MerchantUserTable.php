@@ -112,7 +112,7 @@ class MerchantUserTable extends AbstractTable
     protected const STATUS_LABEL_MAPPING = [
         'active' => [
             'title' => 'Active',
-            'class' => 'label-info',
+            'class' => 'label-success',
         ],
         'blocked' => [
             'title' => 'Deactivated',
