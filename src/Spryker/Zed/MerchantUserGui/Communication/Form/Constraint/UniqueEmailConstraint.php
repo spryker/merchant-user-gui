@@ -27,17 +27,11 @@ class UniqueEmailConstraint extends SymfonyConstraint
      */
     protected $merchantUserFacade;
 
-    /**
-     * @return string
-     */
     public function getMessage(): string
     {
         return static::MESSAGE;
     }
 
-    /**
-     * @return \Spryker\Zed\MerchantUserGui\Dependency\Facade\MerchantUserGuiToMerchantUserFacadeInterface
-     */
     public function getMerchantUserFacade(): MerchantUserGuiToMerchantUserFacadeInterface
     {
         return $this->merchantUserFacade;

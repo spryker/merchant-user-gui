@@ -33,11 +33,6 @@ class MerchantUserGuiDependencyProvider extends AbstractBundleDependencyProvider
      */
     public const FACADE_ROUTER = 'FACADE_ROUTER';
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     public function provideCommunicationLayerDependencies(Container $container): Container
     {
         $container = parent::provideCommunicationLayerDependencies($container);
@@ -49,11 +44,6 @@ class MerchantUserGuiDependencyProvider extends AbstractBundleDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addMerchantUserPropelQuery(Container $container): Container
     {
         $container->set(static::PROPEL_QUERY_MERCHANT_USER, $container->factory(function () {
@@ -63,11 +53,6 @@ class MerchantUserGuiDependencyProvider extends AbstractBundleDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addMerchantUserFacade(Container $container): Container
     {
         $container->set(static::FACADE_MERCHANT_USER, function (Container $container) {
@@ -79,11 +64,6 @@ class MerchantUserGuiDependencyProvider extends AbstractBundleDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addRouterFacade(Container $container): Container
     {
         $container->set(static::FACADE_ROUTER, function (Container $container) {

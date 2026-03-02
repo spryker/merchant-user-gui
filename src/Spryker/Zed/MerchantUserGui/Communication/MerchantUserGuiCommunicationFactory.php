@@ -23,11 +23,6 @@ use Symfony\Component\Form\FormInterface;
 
 class MerchantUserGuiCommunicationFactory extends AbstractCommunicationFactory
 {
-    /**
-     * @param int $idMerchant
-     *
-     * @return \Spryker\Zed\MerchantUserGui\Communication\Table\MerchantUserTable
-     */
     public function createMerchantUserTable(int $idMerchant): MerchantUserTable
     {
         return new MerchantUserTable(
@@ -37,25 +32,16 @@ class MerchantUserGuiCommunicationFactory extends AbstractCommunicationFactory
         );
     }
 
-    /**
-     * @return \Orm\Zed\MerchantUser\Persistence\SpyMerchantUserQuery
-     */
     public function getMerchantUserPropelQuery(): SpyMerchantUserQuery
     {
         return $this->getProvidedDependency(MerchantUserGuiDependencyProvider::PROPEL_QUERY_MERCHANT_USER);
     }
 
-    /**
-     * @return \Spryker\Zed\MerchantUserGui\Communication\Form\DataProvider\MerchantUserUpdateFormDataProvider
-     */
     public function createMerchantUserUpdateFormDataProvider(): MerchantUserUpdateFormDataProvider
     {
         return new MerchantUserUpdateFormDataProvider($this->getMerchantUserFacade());
     }
 
-    /**
-     * @return \Spryker\Zed\MerchantUserGui\Communication\Form\Constraint\UniqueEmailConstraint
-     */
     public function createUniqueEmailConstraint(): UniqueEmailConstraint
     {
         return new UniqueEmailConstraint(
@@ -63,25 +49,16 @@ class MerchantUserGuiCommunicationFactory extends AbstractCommunicationFactory
         );
     }
 
-    /**
-     * @return \Symfony\Component\Form\FormInterface
-     */
     public function getMerchantUserDeleteConfirmForm(): FormInterface
     {
         return $this->getFormFactory()->create(MerchantUserDeleteConfirmForm::class);
     }
 
-    /**
-     * @return \Spryker\Zed\MerchantUserGui\Dependency\Facade\MerchantUserGuiToMerchantUserFacadeInterface
-     */
     public function getMerchantUserFacade(): MerchantUserGuiToMerchantUserFacadeInterface
     {
         return $this->getProvidedDependency(MerchantUserGuiDependencyProvider::FACADE_MERCHANT_USER);
     }
 
-    /**
-     * @return \Spryker\Zed\MerchantUserGui\Dependency\Facade\MerchantUserGuiToRouterFacadeInterface
-     */
     public function getRouterFacade(): MerchantUserGuiToRouterFacadeInterface
     {
         return $this->getProvidedDependency(MerchantUserGuiDependencyProvider::FACADE_ROUTER);

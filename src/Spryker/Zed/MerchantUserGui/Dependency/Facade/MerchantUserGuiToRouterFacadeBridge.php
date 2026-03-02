@@ -24,9 +24,6 @@ class MerchantUserGuiToRouterFacadeBridge implements MerchantUserGuiToRouterFaca
         $this->routerFacade = $routerFacade;
     }
 
-    /**
-     * @return \Spryker\Zed\Router\Business\Router\ChainRouter
-     */
     public function getBackofficeChainRouter(): ChainRouter
     {
         return $this->routerFacade->getBackofficeChainRouter();

@@ -31,11 +31,6 @@ class MerchantUserStatusController extends AbstractCrudMerchantUserController
      */
     protected const MESSAGE_SUCCESS_MERCHANT_STATUS_UPDATE = 'User status has been updated.';
 
-    /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     *
-     * @return \Symfony\Component\HttpFoundation\RedirectResponse
-     */
     public function indexAction(Request $request): RedirectResponse
     {
         $idMerchantUser = $this->castId($request->query->get(static::PARAM_MERCHANT_USER_ID));
@@ -69,11 +64,6 @@ class MerchantUserStatusController extends AbstractCrudMerchantUserController
         return $this->redirectResponse($merchantUserListUrl);
     }
 
-    /**
-     * @param string $redirectUrl
-     *
-     * @return \Symfony\Component\HttpFoundation\RedirectResponse
-     */
     protected function getWrongParametersErrorRedirect(string $redirectUrl): RedirectResponse
     {
         $this->addErrorMessage(static::MESSAGE_ERROR_MERCHANT_WRONG_PARAMETERS);

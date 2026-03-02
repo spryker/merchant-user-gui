@@ -47,11 +47,6 @@ class UniqueEmailConstraintValidator extends ConstraintValidator
         }
     }
 
-    /**
-     * @param string $username
-     *
-     * @return \Generated\Shared\Transfer\UserCriteriaTransfer
-     */
     protected function createUserCriteriaTransfer(string $username): UserCriteriaTransfer
     {
         $userConditionsTransfer = (new UserConditionsTransfer())->addUsername($username);

@@ -54,9 +54,6 @@ class MerchantUserCreateForm extends AbstractType
      */
     protected const PATTERN_LAST_NAME = '/^[^:\/<>]+$/';
 
-    /**
-     * @return string
-     */
     public function getBlockPrefix(): string
     {
         return 'merchant-user';
@@ -128,17 +125,11 @@ class MerchantUserCreateForm extends AbstractType
         return $this;
     }
 
-    /**
-     * @return \Symfony\Component\Validator\Constraints\NotBlank
-     */
     protected function createNotBlankConstraint(): NotBlank
     {
         return new NotBlank();
     }
 
-    /**
-     * @return \Symfony\Component\Validator\Constraints\Regex
-     */
     protected function createFirstNameRegexConstraint(): Regex
     {
         return new Regex([
@@ -146,9 +137,6 @@ class MerchantUserCreateForm extends AbstractType
         ]);
     }
 
-    /**
-     * @return \Symfony\Component\Validator\Constraints\Regex
-     */
     protected function createLastNameRegexConstraint(): Regex
     {
         return new Regex([

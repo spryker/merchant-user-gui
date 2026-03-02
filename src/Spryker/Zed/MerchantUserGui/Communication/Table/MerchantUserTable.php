@@ -158,11 +158,6 @@ class MerchantUserTable extends AbstractTable
      */
     protected $idMerchant;
 
-    /**
-     * @param \Orm\Zed\MerchantUser\Persistence\SpyMerchantUserQuery $merchantUserQuery
-     * @param \Spryker\Zed\MerchantUserGui\Dependency\Facade\MerchantUserGuiToRouterFacadeInterface $routerFacade
-     * @param int $idMerchant
-     */
     public function __construct(
         SpyMerchantUserQuery $merchantUserQuery,
         MerchantUserGuiToRouterFacadeInterface $routerFacade,
@@ -246,11 +241,6 @@ class MerchantUserTable extends AbstractTable
         return $results;
     }
 
-    /**
-     * @param array $item
-     *
-     * @return array
-     */
     protected function createActionColumn(array $item): array
     {
         $router = $this->routerFacade->getBackofficeChainRouter();
@@ -285,11 +275,6 @@ class MerchantUserTable extends AbstractTable
         return $buttons;
     }
 
-    /**
-     * @param array $merchantUserData
-     *
-     * @return string
-     */
     protected function createStatusLabel(array $merchantUserData): string
     {
         $currentStatus = $merchantUserData[static::MERCHANT_USER_STATUS];
@@ -304,12 +289,6 @@ class MerchantUserTable extends AbstractTable
         );
     }
 
-    /**
-     * @param \Spryker\Zed\Router\Business\Router\ChainRouter $router
-     * @param array $item
-     *
-     * @return string
-     */
     protected function buildAvailableStatusButton(ChainRouter $router, array $item): string
     {
         $availableStatus = $item[static::MERCHANT_USER_STATUS] === static::USER_STATUS_ACTIVE

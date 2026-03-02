@@ -55,12 +55,6 @@ class EditMerchantUserController extends AbstractCrudMerchantUserController
         ]);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\MerchantUserTransfer $merchantUserTransfer
-     * @param \Symfony\Component\Form\FormInterface $merchantUserUpdateForm
-     *
-     * @return \Symfony\Component\HttpFoundation\RedirectResponse
-     */
     protected function updateMerchantUser(
         MerchantUserTransfer $merchantUserTransfer,
         FormInterface $merchantUserUpdateForm

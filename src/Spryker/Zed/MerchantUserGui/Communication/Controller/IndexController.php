@@ -21,11 +21,6 @@ class IndexController extends AbstractController
      */
     public const PARAM_MERCHANT_ID = 'merchant-id';
 
-    /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     *
-     * @return \Symfony\Component\HttpFoundation\JsonResponse
-     */
     public function tableAction(Request $request): JsonResponse
     {
         $idMerchant = $this->castId($request->get(static::PARAM_MERCHANT_ID));

@@ -40,19 +40,11 @@ class MerchantUserUpdateFormDataProvider
      */
     protected $merchantUserFacade;
 
-    /**
-     * @param \Spryker\Zed\MerchantUserGui\Dependency\Facade\MerchantUserGuiToMerchantUserFacadeInterface $merchantUserFacade
-     */
     public function __construct(MerchantUserGuiToMerchantUserFacadeInterface $merchantUserFacade)
     {
         $this->merchantUserFacade = $merchantUserFacade;
     }
 
-    /**
-     * @param int $idMerchantUser
-     *
-     * @return \Generated\Shared\Transfer\MerchantUserTransfer|null
-     */
     public function getData(int $idMerchantUser): ?MerchantUserTransfer
     {
         return $this->merchantUserFacade->findMerchantUser(

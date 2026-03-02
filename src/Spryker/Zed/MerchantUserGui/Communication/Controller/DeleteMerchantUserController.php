@@ -94,11 +94,6 @@ class DeleteMerchantUserController extends AbstractCrudMerchantUserController
         ]);
     }
 
-    /**
-     * @param int $idMerchantUser
-     *
-     * @return \Generated\Shared\Transfer\MerchantUserTransfer|null
-     */
     protected function findMerchantUserTransfer(int $idMerchantUser): ?MerchantUserTransfer
     {
         $merchantUserCriteriaTransfer = (new MerchantUserCriteriaTransfer())

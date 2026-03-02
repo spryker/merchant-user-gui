@@ -14,11 +14,6 @@ use Spryker\Zed\Kernel\Communication\Controller\AbstractController;
  */
 abstract class AbstractCrudMerchantUserController extends AbstractController
 {
-    /**
-     * @param int $idMerchant
-     *
-     * @return string
-     */
     protected function getMerchantUserListUrl(int $idMerchant): string
     {
         return $this->getFactory()
@@ -33,9 +28,6 @@ abstract class AbstractCrudMerchantUserController extends AbstractController
             );
     }
 
-    /**
-     * @return string
-     */
     protected function getMerchantListUrl(): string
     {
         return $this->getFactory()

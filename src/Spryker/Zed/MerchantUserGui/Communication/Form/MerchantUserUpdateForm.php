@@ -22,11 +22,6 @@ class MerchantUserUpdateForm extends MerchantUserCreateForm
      */
     public const OPTION_STATUS_CHOICES = 'status_choices';
 
-    /**
-     * @param \Symfony\Component\OptionsResolver\OptionsResolver $resolver
-     *
-     * @return void
-     */
     public function configureOptions(OptionsResolver $resolver): void
     {
         parent::configureOptions($resolver);
