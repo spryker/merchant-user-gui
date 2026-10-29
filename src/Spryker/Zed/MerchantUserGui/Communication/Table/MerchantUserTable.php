@@ -115,8 +115,8 @@ class MerchantUserTable extends AbstractTable
             'class' => 'label-success',
         ],
         'blocked' => [
-            'title' => 'Deactivated',
-            'class' => 'label-danger',
+            'title' => 'Inactive',
+            'class' => 'badge-outline-dark',
         ],
         'deleted' => [
             'title' => 'Deleted',
